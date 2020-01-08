@@ -4,11 +4,24 @@
 package basiclibrary;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    @Test
+    public void testDiceRoll() {
+
+        int[] arr = Library.roll(n:4)
+
+        boolean test = false;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > 0 && arr) [i] <==6){
+                test = true;
+
+            } else{
+                test = false
+            }
+        }
+
     }
 }
