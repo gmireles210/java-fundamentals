@@ -59,7 +59,7 @@ public class Library {
     }
 
     //Temperature hash for lab 3
-    //Multiple portions to follow
+    //
 
     public static String standardizeWeatherData(int[][] temperatures) {
         int tempHigh = temperatures[0][0];
