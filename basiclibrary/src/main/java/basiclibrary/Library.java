@@ -4,7 +4,56 @@
 package basiclibrary;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+
+
+    public static int[] roll(int inputNumber) {
+
+        int[] roller = new int[inputNumber];
+
+        for (int j = 0; j < inputNumber; j++) {
+            int rollerCount = (int) (Math.random() * 6) + 1;
+            roller[j] = rollerCount;
+        }
+        return roller;
+    }
+
+    public static boolean ContainsDuplicates(int[] newArray) {
+        for (int k = 0; k < newArray.length; k++) {
+            for (int j = k + 1; j < newArray.length; j++) {
+                if (newArray[k] == (newArray[j])) {
+                return true;
+                }
+            }
+
+        }
+        return false;
+    }
+
+    public static float averageCalc(int[] arrayData) {
+        int sum = 0;
+        float avg;
+        for (int j = 0; j < arrayData.length; j++) {
+            sum = sum + arrayData[j];
+        }
+        avg = (float) sum/(arrayData.length);
+        return avg;
+    }
+
+    //couldn't figure out the last one. I will come back to it in the future.
+    public static int doubleDownArrays(int[][] arrayOfDoubles) {
+        int smallest = 100;
+        for (int h = 0; h < arrayOfDoubles.length; h++) {
+            int sum = 0;
+            int mean;
+            for (int f = 0; f < arrayOfDoubles[h].length; f++) {
+                sum = sum + arrayOfDoubles[h][f];
+            }
+            mean = sum/(arrayOfDoubles[h].length);
+            if (mean < smallest) {
+                smallest = mean;
+            }
+        }
+        return smallest;
     }
 }
+
