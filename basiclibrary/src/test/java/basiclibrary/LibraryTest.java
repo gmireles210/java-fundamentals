@@ -4,11 +4,61 @@
 package basiclibrary;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    @Test
+    public void rollerTest() {
+
+        int number = 7;
+
+        int[] result = Library.roll(number);
+        assertEquals(number, result.length);
+
+    }
+
+    @Test public void testDuplicatesNon() {
+        // Example array
+        int[] array = {10, 20, 30, 40, 50};
+        // boolean check
+        boolean actual = Library.ContainsDuplicates(array);
+        assertFalse(actual);
+    }
+
+    @Test public void testDuplicates() {
+        // Example array
+        int[] array = {40, 20, 30, 40, 50};
+        // boolean check
+        boolean actual = Library.ContainsDuplicates(array);
+        assertTrue(actual);
+    }
+
+    @Test public void testAverageCalculations() {
+        int[] arrData = {6,8,9,12,14,7};
+
+        float actual = Library.averageCalc(arrData);
+
+        int expected = 9;
+        //adds 1 to insert value into appropriate locale
+        assertEquals(actual, expected,1);
+    }
+
+    @Test public void testDoubleDownArrays() {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+
+        int actual = Library.doubleDownArrays(weeklyMonthTemperatures);
+
+        //57 is the only number that occurs once on each line, so I went with that
+        int expected = 57;
+
+        assertEquals(actual, expected);
     }
 }
+
+
