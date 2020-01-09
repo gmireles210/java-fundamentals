@@ -3,6 +3,8 @@
  */
 package basiclibrary;
 
+import java.util.HashSet;
+
 public class Library {
 
 
@@ -54,6 +56,37 @@ public class Library {
             }
         }
         return smallest;
+    }
+
+    //Temperature hash
+
+    public static String standardizeWeatherData(int[][] temperatures) {
+        int tempHigh = temperatures[0][0];
+        int tempLow = temperatures[0][0];
+
+        HashSet<Integer> temps = new HashSet<>();
+
+        for (int[] wMTemperature : temperatures) {
+            for (int k : wMTemperature) {
+                temps.add(k);
+
+                if (k < tempLow) {
+                    tempLow = k;
+                }
+                if (k > tempHigh) {
+                    tempHigh = k;
+                }
+            }
+        }
+        String ticker = String.format("High: %d %nLow: %d", tempLow, tempHigh);
+
+        // Now to reveal which temps are not in the data set
+        for (int k = tempLow; k < tempHigh; k++) {
+            if (!temps.contains(k)) {
+                ticker += String.format("%nTemp wasn't reached: %d", k);
+            }
+        }
+        return ticker;
     }
 }
 
