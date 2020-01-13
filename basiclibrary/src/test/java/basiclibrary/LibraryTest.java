@@ -5,11 +5,13 @@ package basiclibrary;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test
-    public void rollerTest() {
+    @Test public void rollerTest() {
 
         int number = 7;
 
@@ -35,9 +37,9 @@ public class LibraryTest {
     }
 
     @Test public void testAverageCalculations() {
-        int[] arrData = {6,8,9,12,14,7};
+        int[] arrayData = {6,8,9,12,14,7};
 
-        float actual = Library.averageCalc(arrData);
+        float actual = Library.averageCalc(arrayData);
 
         int expected = 9;
         //adds 1 to insert value into appropriate locale
@@ -59,6 +61,39 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test public void testAnalyzeWeather_checkVaryingTemperatures() {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        String actual = Library.analyzeWeather(weeklyMonthTemperatures);
+        String expected = "\nTemp never reached: 63\nTemp never reached: 67\nTemp never reached: 68\nTemp never reached: 69";
+        assertEquals(expected, actual);
+    }
+
+
+    @Test public void testTally_result() {
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+
+        String champ = Library.tallyVotes(votes);
+        String actual = champ + " got the most votes.";
+        String expected = "Bush got the most votes.";
+        assertEquals(expected, actual);
+    }
+
 }
 
 
