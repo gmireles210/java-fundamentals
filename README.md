@@ -12,3 +12,7 @@
 - Linter created for this lab
 - When it runs, the linter should keep the code written within a strict set of parameters to help write clear and concise code now and ing   the future when using IntelliJ
 
+# Lab 4
+- Serge's Repo contains our work which can be found below:
+- https://github.com/sergeyvoytov/bitmap-transformer
+
