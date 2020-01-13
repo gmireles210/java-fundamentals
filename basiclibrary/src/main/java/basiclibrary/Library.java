@@ -3,7 +3,9 @@
  */
 package basiclibrary;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 public class Library {
 
@@ -61,33 +63,65 @@ public class Library {
     //Temperature hash for lab 3
     //
 
-    public static String standardizeWeatherData(int[][] temperatures) {
-        int tempHigh = temperatures[0][0];
-        int tempLow = temperatures[0][0];
+    public static String analyzeWeather(int[][] weatherArray){
+        int low = weatherArray[0][0];
+        int high = weatherArray[0][0];
+        HashSet<Integer> varyingTemperatures = new HashSet<>();
+        String answer = "";
 
-        HashSet<Integer> temps = new HashSet<>();
 
-        for (int[] wMTemperature : temperatures) {
-            for (int k : wMTemperature) {
-                temps.add(k);
-
-                if (k < tempLow) {
-                    tempLow = k;
+        for (int i = 0; i < weatherArray.length; i++){
+            for (int j = 0; j < weatherArray[i].length; j++){
+                if (weatherArray[i][j] < low){
+                    low = weatherArray[i][j];
                 }
-                if (k > tempHigh) {
-                    tempHigh = k;
+                if (weatherArray[i][j] > high){
+                    high = weatherArray[i][j];
                 }
+                varyingTemperatures.add(weatherArray[i][j]);
             }
         }
-        String ticker = String.format("High: %d %nLow: %d", tempLow, tempHigh);
 
-        // Now to reveal which temps are not in the data set
-        for (int k = tempLow; k < tempHigh; k++) {
-            if (!temps.contains(k)) {
-                ticker += String.format("%nTemp wasn't reached: %d", k);
+
+        System.out.println("High: " + high);
+        System.out.println("Low: " + low);
+
+
+        for (int i = low + 1; i < high; i++){
+            if (!varyingTemperatures.contains(i)){
+                answer += "\nNever saw temperature: " + i;
             }
         }
-        return ticker;
+        return answer;
     }
+
+
+    public static String tallyVotes(List<String> votes) {
+        HashMap<String, Integer> votingMap = new HashMap<>();
+        int votesSum = 0;
+        String champ = "";
+
+
+        for (String vote : votes){
+            if (votingMap.containsKey(vote)){
+                votingMap.put(vote, votingMap.get(vote) + 1);
+            } else {
+                votingMap.put(vote, 1);
+            }
+        }
+
+
+        for (String key : votingMap.keySet()) {
+            if (votesSum < votingMap.get(key)) {
+                votesSum = votingMap.get(key);
+                champ = key;
+            }
+        }
+
+
+        System.out.println(champ + " got the most votes.");
+        return champ;
+    }
+
 }
 
