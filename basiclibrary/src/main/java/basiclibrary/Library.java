@@ -89,7 +89,7 @@ public class Library {
 
         for (int i = low + 1; i < high; i++){
             if (!varyingTemperatures.contains(i)){
-                answer += "\nNever saw temperature: " + i;
+                answer += "\nTemp never reached: " + i;
             }
         }
         return answer;
