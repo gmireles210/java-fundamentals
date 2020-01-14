@@ -1,11 +1,11 @@
 # java-fundamentals
 
-## Lab 2
+# Lab 2
 
 - Created multiple classes and tests for each one as designated per instruction
 - IntelliJ was key to success which ultimately relies on the gradle being set-up properly
 
-## Lab 3
+# Lab 3
 
 - Created the first method for weather
 - IntelliJ has been fixed and gradle works as expected
