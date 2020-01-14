@@ -12,7 +12,6 @@ public class Review {
     }
 
     public String toString() {
-//        name= this.name;
 
         return String.format(
                 "The review: %s the author is  %s and it has %d stars",
