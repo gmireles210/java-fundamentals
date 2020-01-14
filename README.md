@@ -16,3 +16,10 @@
 - Serge's Repo contains our work which can be found below:
 - https://github.com/sergeyvoytov/bitmap-transformer
 
+# Lab 6
+- I worked with Serge today on this lab and used online resources as well
+- Create a restaurant class
+- Created a review class
+- Create the review class about a restaurant
+- Lastly added an add review 
+- Did not get to stretch goals
