@@ -18,11 +18,11 @@ public class RestaurantTest {
         Restaurant arbys = new Restaurant("Arbys", 4, 2);
         Restaurant redLobster = new Restaurant("redLobster", 4, 2);
 
-        arbys.addReview(new Review("anything", "Doug", 1));
-        arbys.addReview(new Review("anything", "Doug", 2));
-        arbys.addReview(new Review("anything", "Doug", 3));
-        arbys.addReview(new Review("anything", "Doug", 4));
-        arbys.addReview(new Review("anything", "Doug", 1));
+        arbys.addReview(new Reviews("anything", "Doug", 1));
+        arbys.addReview(new Reviews("anything", "Doug", 2));
+        arbys.addReview(new Reviews("anything", "Doug", 3));
+        arbys.addReview(new Reviews("anything", "Doug", 4));
+        arbys.addReview(new Reviews("anything", "Doug", 1));
 
         String expected = "The restaurant Arbys has 2.20 stars and has price category of 2, and has 5 reviews";
 

@@ -7,7 +7,7 @@ public class Restaurant {
     public String resName;
     public double numOfStars;
     public int resPricing;
-    LinkedList<Review> resReviews;
+    LinkedList<Reviews> resReviews;
 
     public Restaurant(String resName, int numOfStars, int resPricing) {
         this.resName = resName;
@@ -18,9 +18,9 @@ public class Restaurant {
     }
 //   add review method
 
-    public void addReview(Review newReview) {
+    public void addReview(Reviews newReviews) {
 
-        this.resReviews.add(newReview);
+        this.resReviews.add(newReviews);
         double reviewTally = 0;
         for (int i = 0; i < resReviews.size(); i++) {
             reviewTally += resReviews.get(i).numOfStars;
