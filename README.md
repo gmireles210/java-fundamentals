@@ -17,9 +17,16 @@
 - https://github.com/sergeyvoytov/bitmap-transformer
 
 # Lab 6
+## Part 1
 - I worked with Serge today on this lab and used online resources as well
 - Create a restaurant class
 - Created a review class
 - Create the review class about a restaurant
 - Lastly added an add review 
 - Did not get to stretch goals
+
+## Part 2
+- I created new classes for shop, theater, and theater review
+- In conjunction with those classes, I created test for each
+- I refactored the existing code show data could be shared across via inheritance
+- Tests all checked out and really found out how much Java hates differing spaces between messages (expected and actual)
