@@ -5,10 +5,10 @@ public class Reviews {
     public String author;
     public int numOfStars;
 
-    public Reviews(String body, String author, int numberOfStars) {
+    public Reviews(String body, String author, int numOfStars) {
         this.body = body;
         this.author = author;
-        this.numOfStars = numberOfStars;
+        this.numOfStars = numOfStars;
     }
 
     public Reviews(String itWasPrettyGood, String Doug, int i, String storeName) {
@@ -17,7 +17,7 @@ public class Reviews {
     public String toString() {
 
         return String.format(
-                "The review: %s the author is  %s and it has %d stars",
+                "The review: %s The author is %s and it has %d stars",
                 this.body,
                 this.author,
                 this.numOfStars
