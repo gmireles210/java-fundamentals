@@ -1,14 +1,17 @@
 package inheritance;
 
-public class Review {
+public class Reviews {
     public String body;
     public String author;
     public int numOfStars;
 
-    public Review(String body, String author, int numberOfStars) {
+    public Reviews(String body, String author, int numberOfStars) {
         this.body = body;
         this.author = author;
         this.numOfStars = numberOfStars;
+    }
+
+    public Reviews(String itWasPrettyGood, String Doug, int i, String storeName) {
     }
 
     public String toString() {
