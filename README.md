@@ -30,3 +30,12 @@
 - In conjunction with those classes, I created test for each
 - I refactored the existing code show data could be shared across via inheritance
 - Tests all checked out and really found out how much Java hates differing spaces between messages (expected and actual)
+
+# Lab 8
+## Partnered with Annie
+- I worked with Annie today on this lab and used online resources as well
+- Used the file recentquotes.json to show random popular book quotes
+- Made a program that use GSON to parse the .json file 
+- The only functionality was to show the quote and the author when it ran
+- The app can choose one quote each time it is ran
+- 
